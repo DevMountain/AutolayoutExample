@@ -1,4 +1,4 @@
-SOLUTION: AutolayoutExample
+AutolayoutExample
 =================
 
 A quick example project to demonstrate auto layout with Objective-C.
@@ -22,10 +22,10 @@ There are three problems that can occur with auto layout, and they are almost al
 2. Ambiguous layout (can be seen in console by pausing application and entering `po [[UIWindow keyWindow] _autolayoutTrace]`)
 3. Undesirable layouts (everything works properly, but is not laid out as you want)
 
-This example will focus on demonstrating how to use auto layout exclusively in code. Each branch represents a step in the process and includes the code needed to complete the step, which has been commented out.
+This example will focus on demonstrating how to use auto layout exclusively in code. Each branch represents a step in the process and includes the code needed to complete the step, which has been commented out. The master branch is the same as the solution branch, and includes the working code.
 
 # Branches (steps)
-## master
+## initial
 ### Description
 A simple table with custom cells, laid out using frames.
 
