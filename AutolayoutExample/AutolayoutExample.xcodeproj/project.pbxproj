@@ -12,6 +12,7 @@
 		E72CBA7019DDC33100F6AE26 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CBA6F19DDC33100F6AE26 /* Images.xcassets */; };
 		E72CBA7319DDC33100F6AE26 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72CBA7119DDC33100F6AE26 /* LaunchScreen.xib */; };
 		E72CBA7F19DDC33100F6AE26 /* AutolayoutExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CBA7E19DDC33100F6AE26 /* AutolayoutExampleTests.m */; };
+		E72CBA8A19DDC3C500F6AE26 /* AETableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CBA8919DDC3C500F6AE26 /* AETableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 		E72CBA7819DDC33100F6AE26 /* AutolayoutExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutolayoutExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72CBA7D19DDC33100F6AE26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72CBA7E19DDC33100F6AE26 /* AutolayoutExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutolayoutExampleTests.m; sourceTree = "<group>"; };
+		E72CBA8819DDC3C500F6AE26 /* AETableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AETableViewController.h; sourceTree = "<group>"; };
+		E72CBA8919DDC3C500F6AE26 /* AETableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AETableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 			children = (
 				E72CBA6C19DDC33100F6AE26 /* AppDelegate.h */,
 				E72CBA6D19DDC33100F6AE26 /* AppDelegate.m */,
+				E72CBA8819DDC3C500F6AE26 /* AETableViewController.h */,
+				E72CBA8919DDC3C500F6AE26 /* AETableViewController.m */,
 				E72CBA6F19DDC33100F6AE26 /* Images.xcassets */,
 				E72CBA7119DDC33100F6AE26 /* LaunchScreen.xib */,
 				E72CBA6819DDC33100F6AE26 /* Supporting Files */,
@@ -210,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E72CBA8A19DDC3C500F6AE26 /* AETableViewController.m in Sources */,
 				E72CBA6E19DDC33100F6AE26 /* AppDelegate.m in Sources */,
 				E72CBA6B19DDC33100F6AE26 /* main.m in Sources */,
 			);
