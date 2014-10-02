@@ -48,11 +48,24 @@ static const CGFloat margin = 10.0;
     NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(_photoButton, _nameField, _scoreField, _scoreStepper);
     
     // Space everything out by default spaces with flexible space between score and stepper with min width on name and score
-    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_photoButton]-[_nameField]-[_scoreField]-[_scoreStepper]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
-//    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_photoButton]-[_nameField(>=95)]-[_scoreField(>=40)]-(>=0)-[_scoreStepper]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
+//    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_photoButton]-[_nameField]-[_scoreField]-[_scoreStepper]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
+    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_photoButton]-[_nameField(>=95)]-[_scoreField(>=40)]-(>=0)-[_scoreStepper]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
+//    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_photoButton]-[_nameField(>=95)]-[_scoreField(>=40)]-(>=0@100)-[_scoreStepper]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
 
     // Add the constraint to the common ancestor of all the views you want to lay out
     [self.contentView addConstraints:constraints];
+    
+//    // Try to center the score
+//    NSLayoutConstraint *actualScoreCenterConstraint =
+//    [NSLayoutConstraint constraintWithItem:_scoreField
+//                                 attribute:NSLayoutAttributeCenterX
+//                                 relatedBy:NSLayoutRelationEqual
+//                                    toItem:self.contentView
+//                                 attribute:NSLayoutAttributeCenterX
+//                                multiplier:1.0
+//                                  constant:0.0];
+//    actualScoreCenterConstraint.priority = UILayoutPriorityDefaultHigh;
+//    [self.contentView addConstraint:actualScoreCenterConstraint];
     
     return self;
 }
