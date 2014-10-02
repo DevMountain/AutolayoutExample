@@ -11,6 +11,8 @@
 
 static const NSString *nameKey = @"name";
 static const NSString *scoreKey = @"score";
+static const CGFloat portraitRowHeight = 60.0;
+static const CGFloat landscapeRowHeight = 48.0;
 
 @interface AETableViewController ()
 
@@ -25,13 +27,24 @@ static const NSString *scoreKey = @"score";
     self.tableView.delegate = self;
     [self registerTableView:self.tableView];
     
-    self.tableView.rowHeight = 60.0;
+    self.tableView.rowHeight = portraitRowHeight;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
      self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
+    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+    if (UIDeviceOrientationIsLandscape(deviceOrientation)) {
+        self.tableView.rowHeight = landscapeRowHeight;
+    } else if (UIDeviceOrientationIsPortrait(deviceOrientation)) {
+        self.tableView.rowHeight = portraitRowHeight;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
