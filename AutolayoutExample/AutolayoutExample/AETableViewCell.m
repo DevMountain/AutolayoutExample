@@ -38,17 +38,18 @@ static const CGFloat margin = 10.0;
     
     // CONSTRAINTS
     
-//    // Turn off Autoresizing Mask Layout Constraints that are on by default
-//    [self.photoButton setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    [self.nameField setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    [self.scoreField setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    [self.scoreStepper setTranslatesAutoresizingMaskIntoConstraints:NO];
+    // Turn off Autoresizing Mask Layout Constraints that are on by default
+    [self.photoButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.nameField setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.scoreField setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.scoreStepper setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     // Make a dictionary of all the views you need to lay out
     NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(_photoButton, _nameField, _scoreField, _scoreStepper);
     
     // Space everything out by default spaces with flexible space between score and stepper with min width on name and score
     NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_photoButton]-[_nameField]-[_scoreField]-[_scoreStepper]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
+//    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_photoButton]-[_nameField(>=95)]-[_scoreField(>=40)]-(>=0)-[_scoreStepper]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
 
     // Add the constraint to the common ancestor of all the views you want to lay out
     [self.contentView addConstraints:constraints];
