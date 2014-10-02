@@ -39,6 +39,11 @@ static const CGFloat margin = 10.0;
     return self;
 }
 
+- (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+    self.photoButton.layer.cornerRadius = self.photoButton.frame.size.width / 2;
+}
+
 - (void)awakeFromNib {
     // Initialization code
 }
