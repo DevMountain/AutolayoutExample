@@ -7,6 +7,7 @@
 //
 
 #import "AETableViewController.h"
+#import "AETableViewCell.h"
 
 static const NSString *nameKey = @"name";
 static const NSString *scoreKey = @"score";
@@ -23,6 +24,8 @@ static const NSString *scoreKey = @"score";
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self registerTableView:self.tableView];
+    
+    self.tableView.rowHeight = 60.0;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -56,15 +59,16 @@ static const NSString *scoreKey = @"score";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    cell.textLabel.text = [self scores][indexPath.row][nameKey];
-    
+    AETableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+
+    cell.nameField.text = [self scores][indexPath.row][nameKey];
+    cell.scoreField.text = [self scores][indexPath.row][scoreKey];
+
     return cell;
 }
 
 -(void)registerTableView:(UITableView *)tableView {
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    [tableView registerClass:[AETableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
 /*
