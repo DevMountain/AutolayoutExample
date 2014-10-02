@@ -36,6 +36,17 @@ static const CGFloat margin = 10.0;
     self.scoreStepper.frame = CGRectMake(margin + 48 + margin + 125 + margin + 55 + margin, 15, 0, 0);
     [self.contentView addSubview:self.scoreStepper];
     
+    // CONSTRAINTS
+    
+//    // Make a dictionary of all the views you need to lay out
+//    NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(_photoButton, _nameField, _scoreField, _scoreStepper);
+//    
+//    // Space everything out by default spaces with flexible space between score and stepper with min width on name and score
+//    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_photoButton]-[_nameField]-[_scoreField]-[_scoreStepper]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
+//
+//    // Add the constraint to the common ancestor of all the views you want to lay out
+//    [self.contentView addConstraints:constraints];
+    
     return self;
 }
 
