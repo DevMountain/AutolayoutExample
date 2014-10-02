@@ -20,7 +20,7 @@ static const CGFloat margin = 10.0;
     [self.photoButton setTitle:@"Add" forState:UIControlStateNormal];
     [self.photoButton setTintColor:[UIColor whiteColor]];
     [self.photoButton setBackgroundColor:[UIColor blueColor]];
-//    self.photoButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.photoButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     [self.contentView addSubview:self.photoButton];
     
     self.nameField = [UITextField new];
@@ -72,16 +72,16 @@ static const CGFloat margin = 10.0;
     constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_photoButton]-|" options:0 metrics:nil views:viewsDictionary];
     [self.contentView addConstraints:constraints];
     
-//    // Make the photo button 1:1
-//    NSLayoutConstraint *photoButtonAspectRatioConstraint =
-//    [NSLayoutConstraint constraintWithItem:_photoButton
-//                                 attribute:NSLayoutAttributeWidth
-//                                 relatedBy:NSLayoutRelationEqual
-//                                    toItem:_photoButton
-//                                 attribute:NSLayoutAttributeHeight
-//                                multiplier:1.0
-//                                  constant:0];
-//    [self.photoButton addConstraint:photoButtonAspectRatioConstraint];
+    // Make the photo button 1:1
+    NSLayoutConstraint *photoButtonAspectRatioConstraint =
+    [NSLayoutConstraint constraintWithItem:_photoButton
+                                 attribute:NSLayoutAttributeWidth
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:_photoButton
+                                 attribute:NSLayoutAttributeHeight
+                                multiplier:1.0
+                                  constant:0];
+    [self.photoButton addConstraint:photoButtonAspectRatioConstraint];
     
     return self;
 }
